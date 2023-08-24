@@ -33,37 +33,24 @@ LED greenLED(9);
 void setup()
 {
   Serial.begin(9600); // open the serial port at 9600 bps:
-
-  greenLED.begin();
-  yellowLED.begin();
-  redLED.begin();
 }
 
 void loop()
 {
   //Green LED
   Serial.println("Demonstration of greenLED");
-  greenLED.dot(); //A short blink of the LED
-  greenLED.dash(); //A long blink of the LED
-
   greenLED.on(); //Turn the LED on
   delay(500);
   greenLED.off(); //Turn the LED off
 
   //Yellow LED
   Serial.println("Demonstration of yellowLED");
-  yellowLED.dot();
-  yellowLED.dash();
-
   yellowLED.on();
   delay(500);
   yellowLED.off();
 
   //Red LED
   Serial.println("Demonstration of redLED");
-  redLED.dot();
-  redLED.dash();
-
   redLED.on();
   delay(500);
   redLED.off();
@@ -197,28 +184,41 @@ Connect the push button by the pin out below (or equivalence)
 
 ```arduino
 #include <YCI_Arduino.h>
+#include <DHT.h>
 
-LED redLED(11);
-ButtonWithDebounce button1(4);
+//System pinout
+//S -> Pin8
+//5V -> 5V
+//GND -> GND
+#define dhtPin 8  //Data pin for the temperature sensor
+#define dhtType DHT11 //Using DHT11
 
-int relay_pin = 7;
+DHT dht(dhtPin, dhtType); // Initialize DHT sensor
 
-void setup() {
-  pinMode(relay_pin, OUTPUT);
-  Serial.begin(9600);
+//System variables
+float h;
+float t;
+
+void setup()
+{
+  Serial.begin(9600); // open the serial port at 9600 bps:
+  dht.begin(); //Initialize the sensor
 }
 
-void loop() {
-  if (button1.isPressed()) {
-    Serial.println("Button 1 is pressed");
-    redLED.on();
-    digitalWrite(relay_pin,HIGH);
+void loop()
+{
+  h = dht.readHumidity();
+  t = dht.readTemperature();
 
-  } else {
-    Serial.println("Button 1 is NOT pressed");
-    redLED.off();
-    digitalWrite(relay_pin,LOW);
+  if (isnan(h) || isnan(t)){ //If the value is not a number
+    Serial.println("Error in getting DHT data");
+    return;
   }
+
+  Serial.print("Temperature: ");
+  Serial.print(t);
+  Serial.println("C");
+
 }
 ```
 
