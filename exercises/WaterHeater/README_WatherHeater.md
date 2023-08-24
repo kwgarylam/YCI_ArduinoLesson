@@ -127,7 +127,7 @@ Connect the push button by the pin out below (or equivalence)
 | ----------- | ------- |
 | VCC         | 5V      |
 | GND         | GND     |
-| IN          | 7       |
+| IN          | 12      |
 
 ### Coding example
 
@@ -137,7 +137,7 @@ Connect the push button by the pin out below (or equivalence)
 LED redLED(11);
 ButtonWithDebounce button1(4);
 
-int relay_pin = 7;
+int relay_pin = 12;
 
 void setup() {
   pinMode(relay_pin, OUTPUT);
@@ -190,7 +190,7 @@ Connect the push button by the pin out below (or equivalence)
 //S -> Pin8
 //5V -> 5V
 //GND -> GND
-#define dhtPin 8  //Data pin for the temperature sensor
+#define dhtPin 5  //Data pin for the temperature sensor
 #define dhtType DHT11 //Using DHT11
 
 DHT dht(dhtPin, dhtType); // Initialize DHT sensor
