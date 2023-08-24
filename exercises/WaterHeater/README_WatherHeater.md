@@ -89,7 +89,7 @@ Connect the push button by the pin out below (or equivalence)
 
 | Push button | Arduino |
 | ----------- | ------- |
-| OUT         | 9       |
+| OUT         | 8       |
 | VCC         | 5V      |
 | GND         | GND     |
 
@@ -98,7 +98,7 @@ Connect the push button by the pin out below (or equivalence)
 ```arduino
 #include <YCI_Arduino.h>
 
-LED redLED(9);
+LED redLED(11);
 
 ButtonWithDebounce button1(4);
 
@@ -117,10 +117,60 @@ void loop(){
     redLED.off();
     delay(50);
   }
+}
 ```
 
 ### Expected output
 
 When button 1 is pressed, the LED will turn on.
 
+## 3. Relay
 
+### Libraries
+
+Basic libraries from the teaching material are used.
+
+- YCI_Arduino.h
+
+### Pin out
+
+Connect the push button by the pin out below (or equivalence)
+
+| Push button | Arduino |
+| ----------- | ------- |
+| VCC         | 5V      |
+| GND         | GND     |
+| IN          | 7       |
+
+### Coding example
+
+```arduino
+#include <YCI_Arduino.h>
+
+LED redLED(11);
+ButtonWithDebounce button1(4);
+
+int relay_pin = 7;
+
+void setup() {
+  pinMode(relay_pin, OUTPUT);
+  Serial.begin(9600);
+}
+
+void loop() {
+  if (button1.isPressed()) {
+    Serial.println("Button 1 is pressed");
+    redLED.on();
+    digitalWrite(relay_pin,HIGH);
+
+  } else {
+    Serial.println("Button 1 is NOT pressed");
+    redLED.off();
+    digitalWrite(relay_pin,LOW);
+  }
+}
+```
+
+### Expected output
+
+When button 1 is pressed, the LED will turn on.
