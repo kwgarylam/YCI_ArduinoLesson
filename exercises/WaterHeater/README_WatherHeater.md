@@ -173,4 +173,72 @@ void loop() {
 
 ### Expected output
 
-When button 1 is pressed, the LED will turn on.
+When button 1 is pressed, the relay will turn on.
+
+## 4. Temperature sensor (DHT11)
+
+### Libraries
+
+DHT libraries are used. To use the libraries, in the Arduino IDE, click on the 
+
+- DHT11.h
+
+### Pin out
+
+Connect the push button by the pin out below (or equivalence)
+
+| DHT11    | Arduino |
+| -------- | ------- |
+| S (Data) | 5       |
+| 5V       | 5V      |
+| GND      | GND     |
+
+### Coding example
+
+```arduino
+#include <YCI_Arduino.h>
+
+LED redLED(11);
+ButtonWithDebounce button1(4);
+
+int relay_pin = 7;
+
+void setup() {
+  pinMode(relay_pin, OUTPUT);
+  Serial.begin(9600);
+}
+
+void loop() {
+  if (button1.isPressed()) {
+    Serial.println("Button 1 is pressed");
+    redLED.on();
+    digitalWrite(relay_pin,HIGH);
+
+  } else {
+    Serial.println("Button 1 is NOT pressed");
+    redLED.off();
+    digitalWrite(relay_pin,LOW);
+  }
+}
+```
+
+### Expected output
+
+When the finger is touching the sensor, the temperature will rise up.
+
+## Assembled system
+
+When we combine all the components together, we need to defind the pinout again.
+
+### Pin out
+
+| IO Devices         | <->       | Arduino |
+| ------------------ | --------- | ------- |
+| Button 1 (Cold)    | <-Input   | 8       |
+| Button 2 (Hot)     | <-Input   | 7       |
+| Button 3 (Control) | <-Input   | 6       |
+| Temperature Sensor | <-Input   | 5       |
+| Relay (Motor)      | Output -> | 12      |
+| Traffic (Red)      | Output -> | 11      |
+| Traffic (Yellow)   | Output -> | 10      |
+| Traffic (Green)    | Output -> | 9       |
