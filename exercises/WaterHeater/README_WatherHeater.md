@@ -101,7 +101,12 @@ Description on key changes of the microcontroller could be found in the logbook.
 
 Input devices and output devices are selected with justification for most of the operational requirements in activity 3
 
+- [ ] A.P4: Describe the function of some appropriate input and output hardware devices.
+
+Description of some appropriate could be found in activity 3.
+
 - The selection and justification of suitable input and output devices
+- A description of the system design covering input and output devices and microcontroller connections
 
 **Examples:**
 **Input devices:**
@@ -126,13 +131,6 @@ LED:
 A traffic light LED serves as a system indicator, lighting up when receiving a signal from the microcontroller that indicates the selection of cold, hot water and the water temperature has reached 37.C. 
 
 
-- [ ] A.P4: Describe the function of some appropriate input and output hardware devices.
-
-Description of some appropriate could be found in activity 3.
-
-- A description of the system design covering input and output devices and microcontroller connections
-
-**Examples:**
 
 - [ ] A.P5: Produce an outline design for the program structure considering some key operational requirements.
 
