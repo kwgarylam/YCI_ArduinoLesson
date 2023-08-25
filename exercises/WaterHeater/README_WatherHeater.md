@@ -1,10 +1,19 @@
 # Guildline for the Task Booklet
 
+Student may follow this guildline to prepare your report.
+
 # Activity 1
 
-- [ ] C.P10
+## Task planning and system design changes
+
+- [ ] C.P10: Prepare a project plan at the start of the process that covers the key activities.
+
+- A simple project plan was prepared, only cover the key activities without details explanation
   
-  - A short project time plan/Gantt chart
+  - **Suggestion on this requirement:**
+  
+  - **A short project time plan/Gantt chart**
+    The task planning should monitor your progress throughout the rest of the task and make any adjustments as required.
 
 # Individual testing of the components
 
