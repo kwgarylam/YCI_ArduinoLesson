@@ -10,11 +10,15 @@ Student may follow this guildline to prepare your report.
 
 A simple project plan was prepared, only cover the key activities without details explanation
 
-**Examples:**
+- The task planning should monitor your progress throughout the rest of the task and make any adjustments as required.
+
+---
+
+#### **Examples:**
 
 **A short project time plan/Gantt chart**
 
-The task planning should monitor your progress throughout the rest of the task and make any adjustments as required.
+
 
 ![GanttChart](https://github.com/kwgarylam/YCI_ArduinoLesson/blob/main/misc/figures/GanttChart.PNG?raw=true)
 
@@ -33,7 +37,9 @@ The task planning should monitor your progress throughout the rest of the task a
 | **Activity 6** | **System in operation**                                                                                                                                                                                                             |
 | Task details:  | Create a Gantt chart to manage the time for the upcoming tasks                                                                                                                                                                      |
 
-### Logbook for activity 1
+---
+
+#### Logbook for activity 1
 
 - [ ] C.P11: Describe the key changes made to the microcontroller system during the development process.
 
@@ -55,7 +61,10 @@ A set of technical specification was produced and meet some elements of the brie
 
 - By interpreting the client brief into operational requirements, prepare a technical specification for a user-friendly system that can handle some unexpected events.
 
-**Examples:**
+---
+
+#### **Examples:**
+
 **Technical Specification:** (2 - 3 paragraphs)
 The car pressure washer system will be designed to indicate the selected option (cold rinse or hot wash), operate the DC motor for up to 10 seconds for the cold rinse option when the spray lever is pressed, indicate when the hot water has reached a minimum temperature (37.C), and operate the DC motor for up to 10 seconds for the hot wash option after the minimum temperature (37.C) is reached and when the spray lever is pressed.
 
@@ -63,13 +72,17 @@ The system must indicate if a cold rinse (Option 1) or a hot wash (Option 2) has
 
 The system must indicate when the hot water has reached a minimum temperature (37.C). The DC motor should operate for up to 10 seconds for the hot wash option after the minimum temperature (37.C) is reached. If the control lever is released, the DC motor will stop. As the operation and testing of the prototype system does not require the use of heating elements, it is assumed that the heating element can maintain water temperature once it reaches 37.C. No additional control will be added for the heating element, instead a temperature sensor. 
 
+---
+
 - [ ] A.P2: Produce a test plan that demonstrates a limited understanding of the system.
 
 A test plan was produced and the test plan demonstrated some understanding of the system.
 
 - Prepare a test plan to check the functionality of the final solution against the technical specification and include some unexpected events
 
-**Examples:**
+---
+
+#### **Examples:**
 **Test plan** (3 - 5 tests)
 
 | Test number | Purpose of the test                                          | Test condition                                                                     | Expected result                                                                            |
@@ -81,7 +94,9 @@ A test plan was produced and the test plan demonstrated some understanding of th
 | 005         | Testing the operation of DC motor when Option 2 is selected. | When option 2 is selected, press the control lever for few seconds and release it. | ...                                                                                        |
 | And more... | ...                                                          | ...                                                                                | ...                                                                                        |
 
-### Logbook for activity 2
+---
+
+#### Logbook for activity 2
 
 - [ ] C.P11: Describe the key changes made to the microcontroller system during the development process.
 
@@ -92,7 +107,7 @@ Description on key changes of the microcontroller could be found in the logbook.
 2. Issues encountered in this session and solutions with justification:
    Describe the problem you encountered.
    Describe the solution you proposed.
-  
+
 ## Activity 3
 
 ### System design
@@ -108,7 +123,11 @@ Description of some appropriate could be found in activity 3.
 - The selection and justification of suitable input and output devices
 - A description of the system design covering input and output devices and microcontroller connections
 
-**Examples:**
+---
+
+#### **Examples:**
+**Selection of Appropriate Hardware:**
+
 **Input devices:**
 Two-position Selector switch: 
 A two-position selector switch is used to select between two options, a cold rinse (Option 1) or hot wash (Option 2). When the switch is turned to a particular position, it completes the circuit by contacting the corresponding contact blocks, allowing current to flow through the circuit.
@@ -122,7 +141,6 @@ A water temperature sensor connected to microcontroller is used to monitor the t
 Environmental temperature sensor:
 An environmental temperature sensor connected to microcontroller is used to monitor the temperature of environment. The microcontroller receives signals from the sensor and processes them to determine the temperature of the environment.
 
-
 **Output devices:**
 DC motor:
 A DC motor is used to power water pumps. It is operated by a signal sent from a microcontroller. The microcontroller processes the signal and sends a command to the motor driver circuit to convert the signal into a current that powers the motor.
@@ -130,7 +148,7 @@ A DC motor is used to power water pumps. It is operated by a signal sent from a 
 LED: 
 A traffic light LED serves as a system indicator, lighting up when receiving a signal from the microcontroller that indicates the selection of cold, hot water and the water temperature has reached 37.C. 
 
-
+---
 
 - [ ] A.P5: Produce an outline design for the program structure considering some key operational requirements.
 
@@ -138,23 +156,65 @@ A flow chart for key operational structure were prepared for system programming.
 
 - A plan for the program structure detailing key system operations.
 
-**Examples:**
+---
 
-# Individual testing of the components
+#### **Examples:**
 
-You are required to write individual code for each component, and testing their performance in the report (Activity 4).
+Flow chart for the system:
 
-## 1. Blinking LED
+![FlowChart](https://github.com/kwgarylam/YCI_ArduinoLesson/blob/main/misc/figures/flowchart.png?raw=true)
 
-### Libraries
+The above diagram is a flow chart to visualise the steps of the program / system in a sequential order. As a result, the consumer can read and understand program in a simpler way.
 
-- <YCI_Arduino.h>
+Additionally, a flow chart can be a checklist to ensure there are no missing components in the system. In other words, the flow chart can help to meet the user requirement with nothing left, providing a satisfied system for the consumer.
 
-Arduino libraries or YCI libraries from the teaching material are used for LED blinking.
+---
+#### Logbook for activity 3
 
-### Pin out
+- [ ] C.P11: Describe the key changes made to the microcontroller system during the development process.
 
-Connect the traffic light/standalone LED by the pin out below (or equivalence)
+Description on key changes of the microcontroller could be found in the logbook. 3/5
+
+1. What I have done this session:
+   Disribe what you have done in this session. (At least 3 sentences)
+2. Issues encountered in this session and solutions with justification:
+   Describe the problem you encountered.
+   Describe the solution you proposed.
+
+## Activity 4
+
+### System assembly and programming
+Individual testing of each component with code and photos.
+
+You are required to write individual code for each component, and testing their performance in the report.
+
+- [ ] A.P7: Create a program using simple and mostly appropriate constructs and techniques.
+
+A program was created to solve the problem using mainly simple constructs.
+
+
+- [ ] A.P8: Test specific parts of the microcontroller system during the development process to determine if they function as intended.
+
+Some photos of testing specific parts of the microcontroller was shown in the development state of the system in activity 4
+
+- [ ] A.P9: Annotate the program to demonstrate some understanding of key areas of the program.
+
+Some key area of the program were annotated that demonstrate some understanding of key areas of the problem.
+
+- producing the software program and annotating the code
+- the assembly of any hardware (if required)
+- refining the system so that it operates as expected and can handle some unexpected events
+
+---
+#### **Examples:**
+
+Testing of Individual Components
+
+1. Traffic Light LED
+
+**Pin out**
+
+The traffic light are connected by the pin out below: (M4)
 
 | Traffic Light/ LED | Arduino |
 | ------------------ | ------- |
@@ -163,10 +223,9 @@ Connect the traffic light/standalone LED by the pin out below (or equivalence)
 | Y                  | 10      |
 | G                  | 9       |
 
-### Coding example
+**Coding**
 
-#### Simple version
-
+- Example 1
 Coding example using basic setup (Suggested)
 
 ```cpp
@@ -191,8 +250,7 @@ void loop() {
 }
 ```
 
-#### Class Implementation
-
+- Example 2
 Coding example using class (Advanced)
 
 ```cpp
@@ -234,21 +292,15 @@ void loop()
 }
 ```
 
-### Expected output
+**Expected output**
 
-The LED will flash one by one with the pattern dot, dash, on and off.
+![Testing_LED]()
+The LED will flash one by one with the pattern on and off.
 
-## 2. Arduino Push Button
+2. Push Button
 
-### Libraries
-
-- <YCI_Arduino.h>
-
-Arduino libraries or YCI libraries from the teaching material are used for de-bouncing.
-
-### Pin out
-
-Connect the push button by the pin out below (or equivalence)
+**Pin out**
+Push buttons are connected by the pin out below: (M4)
 
 | Push button | Arduino |
 | ----------- | ------- |
@@ -256,11 +308,10 @@ Connect the push button by the pin out below (or equivalence)
 | VCC         | 5V      |
 | GND         | GND     |
 
-### Coding example
+**Coding example**
 
-#### Simple version
-
-Coding example using basic setup of pin mode and digitalRead function. However, de-bounding and changes of state are not considered.
+- Example 1 (Simple version)
+- Coding example using basic setup of pin mode and digitalRead function. However, de-bounding and changes of state are not considered.
 
 ```cpp
 // Libraries
@@ -315,11 +366,9 @@ void loop(){
 }
 ```
 
-#### Class Implementation
-
-Coding example using class (Advanced)
-
-This version is **suggested** since debouncing is used for the push button. In addition, the function will update the button status by continuously polling the state.
+- Example 2 (Class Implementation)
+- Coding example using class (Advanced)
+- This version is **suggested** since debouncing is used for the push button. In addition, the function will update the button status by continuously polling the state.
 
 ```cpp
 // Libraries
@@ -368,21 +417,18 @@ void loop(){
 }
 ```
 
-### Expected output
+**Expected output**
+
+![Testing_Button]()
 
 When button 1 is pressed, the LED will turn on.
 
-## 3. Relay
+3. Relay
 
-### Libraries
 
-- <YCI_Arduino.h>
+**Pin out**
 
-Basic libraries from the teaching material are used for debouncing.
-
-### Pin out
-
-Connect the push button by the pin out below (or equivalence)
+Connect the push button by the pin out below: (M4)
 
 | Push button | Arduino |
 | ----------- | ------- |
@@ -390,7 +436,7 @@ Connect the push button by the pin out below (or equivalence)
 | GND         | GND     |
 | IN          | 12      |
 
-### Coding example
+**Coding example**
 
 ```cpp
 #include <YCI_Arduino.h>
@@ -416,18 +462,18 @@ void loop() {
 }
 ```
 
-### Expected output
+
+**Expected output**
+
+![Testing_Relay]()
 
 When button 1 is pressed, the relay will turn on and vice versa.
 
-## 4. Temperature sensor (DHT11)
+4. Temperature sensor (DHT11)
 
-### Libraries
-
-- <DHT11.h>
+- Libraries <DHT11.h>
 
 DHT libraries are used. To use the libraries, in the Arduino IDE, click on the 
-
 `Sketch > Include Library > Manage libraries... `
 
 Under the library Manager, search the `DHT` library. And you will find the `DHT sensor library by Adafruit`. Install the library version 1.4.4 or above by a simply click.
@@ -487,15 +533,17 @@ When the finger is touching the sensor, the temperature will rise up.
 
 When we combine all the components together, we need to defind the pinout again.
 
-### Pin out
+Circuit Connection: (M4)
 
-| IO Devices         | <->       | Arduino |
-| ------------------ | --------- | ------- |
-| Button 1 (Cold)    | <-Input   | 8       |
-| Button 2 (Hot)     | <-Input   | 7       |
-| Button 3 (Control) | <-Input   | 6       |
-| Temperature Sensor | <-Input   | 5       |
-| Relay (Motor)      | Output -> | 12      |
-| Traffic (Red)      | Output -> | 11      |
-| Traffic (Yellow)   | Output -> | 10      |
-| Traffic (Green)    | Output -> | 9       |
+| I/O Devices        | <In/Output> | Arduino |
+| ------------------ | ----------- | ------- |
+| Button 1 (Cold)    | <-Input     | 8       |
+| Button 2 (Hot)     | <-Input     | 7       |
+| Button 3 (Control) | <-Input     | 6       |
+| Temperature Sensor | <-Input     | 5       |
+| Relay (Motor)      | Output ->   | 12      |
+| Traffic (Red)      | Output ->   | 11      |
+| Traffic (Yellow)   | Output ->   | 10      |
+| Traffic (Green)    | Output ->   | 9       |
+
+The above is a listing of IO pin for each IO devices. This can reassure that the system is being placed / inserted at the correct position. Also, it will help effectively identifying the problem later in the program integration, where the wrong IO pin device can be quickly identified.
