@@ -1,3 +1,11 @@
+# Guildline for the Task Booklet
+
+# Activity 1
+
+- [ ] C.P10
+  
+  - A short project time plan/Gantt chart
+
 # Individual testing of the components
 
 You are required to write individual code for each component, and testing their performance in the report (Activity 4).
@@ -6,9 +14,9 @@ You are required to write individual code for each component, and testing their 
 
 ### Libraries
 
-Arduino libraries or YCI libraries from the teaching material are used for LED blinking.
-
 - <YCI_Arduino.h>
+
+Arduino libraries or YCI libraries from the teaching material are used for LED blinking.
 
 ### Pin out
 
@@ -28,15 +36,19 @@ Connect the traffic light/standalone LED by the pin out below (or equivalence)
 Coding example using basic setup (Suggested)
 
 ```cpp
+// Libraries
+// In this example, no library is used.
+
+// Variables
 int ledPin_red = 9;
 
-// the setup function runs once when you press reset or power the board
+// Setup function runs once when you press reset or power the board
 void setup() {
   // initialize digital pin LED as an output.
   pinMode(ledPin_red, OUTPUT);
 }
 
-// the loop function runs over and over again forever
+// The loop function runs over and over again forever
 void loop() {
   digitalWrite(ledPin_red, HIGH);  // turn the LED on (HIGH is the voltage level)
   delay(1000);            // wait for a second
@@ -50,17 +62,21 @@ void loop() {
 Coding example using class (Advanced)
 
 ```cpp
+// Libraries
 #include <YCI_Arduino.h>
 
+// Variables
 LED redLED(11);
 LED yellowLED(10);
 LED greenLED(9);
 
+// Setup function
 void setup()
 {
   Serial.begin(9600); // open the serial port at 9600 bps:
 }
 
+// Loop function
 void loop()
 {
   //Green LED
@@ -92,9 +108,9 @@ The LED will flash one by one with the pattern dot, dash, on and off.
 
 ### Libraries
 
-Arduino libraries or YCI libraries from the teaching material are used for de-bouncing.
-
 - <YCI_Arduino.h>
+
+Arduino libraries or YCI libraries from the teaching material are used for de-bouncing.
 
 ### Pin out
 
@@ -113,14 +129,17 @@ Connect the push button by the pin out below (or equivalence)
 Coding example using basic setup of pin mode and digitalRead function. However, de-bounding and changes of state are not considered.
 
 ```cpp
+// Libraries
 #include <YCI_Arduino.h>
 
+// Variables
 int ledPin_red = 9;
 int ledPin_yellow = 10;
 
 int button1= 2;
 int button2= 3;
 
+// Setup function
 void setup(){
   Serial.begin(9600); // Open the serial port for de-bugging
 
@@ -131,6 +150,7 @@ void setup(){
   pinMode(button2, INPUT);
 }
 
+// Loop function
 void loop(){
 
   byte buttonState1 = digitalRead(button1);
@@ -165,17 +185,20 @@ void loop(){
 
 Coding example using class (Advanced)
 
-This version is **suggested **since debouncing is used for the push button. In addition, the function will update the button status by continuously polling the state.
+This version is **suggested** since debouncing is used for the push button. In addition, the function will update the button status by continuously polling the state.
 
 ```cpp
+// Libraries
 #include <YCI_Arduino.h>
 
+// Variables
 int ledPin_red = 9;
 int ledPin_yellow = 10;
 
 ButtonWithDebounce button1(2);
 ButtonWithDebounce button2(3);
 
+// Setup function
 void setup(){
   Serial.begin(9600); // Open the serial port for de-bugging
 
@@ -183,6 +206,7 @@ void setup(){
   pinMode(ledPin_yellow, OUTPUT);
 }
 
+// Loop function
 void loop(){
 
   // To check the functionality of button 1.
@@ -218,9 +242,9 @@ When button 1 is pressed, the LED will turn on.
 
 ### Libraries
 
-Basic libraries from the teaching material are used for debouncing.
-
 - <YCI_Arduino.h>
+
+Basic libraries from the teaching material are used for debouncing.
 
 ### Pin out
 
@@ -266,13 +290,13 @@ When button 1 is pressed, the relay will turn on and vice versa.
 
 ### Libraries
 
+- <DHT11.h>
+
 DHT libraries are used. To use the libraries, in the Arduino IDE, click on the 
 
 `Sketch > Include Library > Manage libraries... `
 
 Under the library Manager, search the `DHT` library. And you will find the `DHT sensor library by Adafruit`. Install the library version 1.4.4 or above by a simply click.
-
-- <DHT11.h>
 
 ### Pin out
 
@@ -287,7 +311,6 @@ Connect the push button by the pin out below (or equivalence)
 ### Coding example
 
 ```cpp
-#include <YCI_Arduino.h>
 #include <DHT.h>
 
 #define dhtPin 5  //Data pin for the temperature sensor
