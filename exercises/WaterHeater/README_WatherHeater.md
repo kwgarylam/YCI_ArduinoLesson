@@ -9,11 +9,28 @@ Student may follow this guildline to prepare your report.
 - [ ] C.P10: Prepare a project plan at the start of the process that covers the key activities.
 
 - A simple project plan was prepared, only cover the key activities without details explanation
+
+- **Suggestion on this requirement:**
   
-  - **Suggestion on this requirement:**
+  **A short project time plan/Gantt chart**
   
-  - **A short project time plan/Gantt chart**
-    The task planning should monitor your progress throughout the rest of the task and make any adjustments as required.
+  The task planning should monitor your progress throughout the rest of the task and make any adjustments as required.
+  
+  ![GanttChart](https://github.com/kwgarylam/YCI_ArduinoLesson/blob/main/misc/figures/GanttChart.PNG?raw=true)
+
+- | **Activity 1:**      | **Task planning and system design changes**                                                                                                                                                                                         |
+  | -------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+  | Details of the task: | Create a Gantt chart to manage the time for the upcoming tasks                                                                                                                                                                      |
+  | **Activity 2:**      | **Analysis of the brief**                                                                                                                                                                                                           |
+  | Details of the task: | Prepare a technical specification that aligns with the user requirements and a test plan to check the functionality of the system.                                                                                                  |
+  | **Activity 3:**      | **System design**                                                                                                                                                                                                                   |
+  | Details of the task: | Select input and output devices for the microcontroller system. Create a circuit diagram using circuit drawing software and construct a flow chart to outline the system's function, input and output processes, and control logic. |
+  | **Activity 4:**      | **System assembly and programming**                                                                                                                                                                                                 |
+  | Details of the task: | Compile a test list for input and output devices with photos and screenshots of the program as evidence. After testing each component, begin programming with clear annotations for future updates.                                 |
+  | **Activity 5:**      | **System testing and result analysis**                                                                                                                                                                                              |
+  | Details of the task: | Test the program and system based on the established test plan from activity 2 and record the results.                                                                                                                              |
+  | **Activity 6:**      | **System in operation**                                                                                                                                                                                                             |
+  | Details of the task: | Create a 3-minute video to demonstrate system operation, outlining its features.                                                                                                                                                    |
 
 # Individual testing of the components
 
