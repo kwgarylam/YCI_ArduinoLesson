@@ -23,7 +23,7 @@ Connect the traffic light/standalone LED by the pin out below (or equivalence)
 
 ### Coding example
 
-```
+```Arduino
 #include <YCI_Arduino.h>
 
 LED redLED(11);
