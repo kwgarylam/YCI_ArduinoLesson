@@ -23,7 +23,7 @@ Connect the traffic light/standalone LED by the pin out below (or equivalence)
 
 ### Coding example
 
-```arduino
+```
 #include <YCI_Arduino.h>
 
 LED redLED(11);
@@ -82,7 +82,7 @@ Connect the push button by the pin out below (or equivalence)
 
 ### Coding example
 
-```arduino
+```
 #include <YCI_Arduino.h>
 
 LED redLED(11);
@@ -131,7 +131,7 @@ Connect the push button by the pin out below (or equivalence)
 
 ### Coding example
 
-```arduino
+```
 #include <YCI_Arduino.h>
 
 LED redLED(11);
@@ -182,7 +182,7 @@ Connect the push button by the pin out below (or equivalence)
 
 ### Coding example
 
-```arduino
+```
 #include <YCI_Arduino.h>
 #include <DHT.h>
 
