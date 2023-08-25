@@ -6,9 +6,9 @@ You are required to write individual code for each component, and testing their 
 
 ### Libraries
 
-Basic libraries from the teaching material are used.
+Arduino libraries or YCI libraries from the teaching material are used for LED blinking.
 
-- YCI_Arduino.h
+- <YCI_Arduino.h>
 
 ### Pin out
 
@@ -23,7 +23,33 @@ Connect the traffic light/standalone LED by the pin out below (or equivalence)
 
 ### Coding example
 
-```Arduino
+#### Simple version
+
+Coding example using basic setup (Suggested)
+
+```cpp
+int ledPin_red = 9;
+
+// the setup function runs once when you press reset or power the board
+void setup() {
+  // initialize digital pin LED as an output.
+  pinMode(ledPin_red, OUTPUT);
+}
+
+// the loop function runs over and over again forever
+void loop() {
+  digitalWrite(ledPin_red, HIGH);  // turn the LED on (HIGH is the voltage level)
+  delay(1000);            // wait for a second
+  digitalWrite(ledPin_red, LOW);   // turn the LED off by making the voltage LOW
+  delay(1000);            // wait for a second
+}
+```
+
+#### Class Implementation
+
+Coding example using class (Advanced)
+
+```cpp
 #include <YCI_Arduino.h>
 
 LED redLED(11);
@@ -66,9 +92,9 @@ The LED will flash one by one with the pattern dot, dash, on and off.
 
 ### Libraries
 
-Basic libraries from the teaching material are used.
+Arduino libraries or YCI libraries from the teaching material are used for de-bouncing.
 
-- YCI_Arduino.h
+- <YCI_Arduino.h>
 
 ### Pin out
 
@@ -82,27 +108,104 @@ Connect the push button by the pin out below (or equivalence)
 
 ### Coding example
 
-```
+#### Simple version
+
+Coding example using basic setup of pin mode and digitalRead function. However, de-bounding and changes of state are not considered.
+
+```cpp
 #include <YCI_Arduino.h>
 
-LED redLED(11);
+int ledPin_red = 9;
+int ledPin_yellow = 10;
 
-ButtonWithDebounce button1(4);
+int button1= 2;
+int button2= 3;
 
 void setup(){
-  Serial.begin(9600); // open the serial port at 9600 bps:
+  Serial.begin(9600); // Open the serial port for de-bugging
+
+  pinMode(ledPin_red, OUTPUT); // initialize digital pin LED as an output.
+  pinMode(ledPin_yellow, OUTPUT);
+
+  pinMode(button1, INPUT); // initialize digital pin Button as an input.
+  pinMode(button2, INPUT);
 }
 
 void loop(){
-  if (button1.isPressed()){
+
+  byte buttonState1 = digitalRead(button1);
+  byte buttonState2 = digitalRead(button2);
+
+  // To check the functionality of button 1.
+  if (buttonState1 == LOW){
     Serial.println("Button 1 is pressed ");
-    redLED.on();
-    delay(50);
+    digitalWrite(ledPin_red, HIGH);  // turn the LED on
+    delay(1000);
   }
   else{
     Serial.println("Button 1 is NOT pressed ");
-    redLED.off();
-    delay(50);
+    digitalWrite(ledPin_red, LOW);   // turn the LED off
+    delay(1000);
+  }
+  // To check the functionality of button 2.
+  if (buttonState2 == LOW){
+    Serial.println("Button 2 is pressed ");
+    digitalWrite(ledPin_yellow , HIGH);   // turn the LED on
+    delay(1000);
+  }
+  else{
+    Serial.println("Button 2 is NOT pressed ");
+    digitalWrite(ledPin_yellow , LOW);   // turn the LED off
+    delay(1000);
+  }
+}
+```
+
+#### Class Implementation
+
+Coding example using class (Advanced)
+
+This version is **suggested **since debouncing is used for the push button. In addition, the function will update the button status by continuously polling the state.
+
+```cpp
+#include <YCI_Arduino.h>
+
+int ledPin_red = 9;
+int ledPin_yellow = 10;
+
+ButtonWithDebounce button1(2);
+ButtonWithDebounce button2(3);
+
+void setup(){
+  Serial.begin(9600); // Open the serial port for de-bugging
+
+  pinMode(ledPin_red, OUTPUT); // initialize digital pin LED as an output.
+  pinMode(ledPin_yellow, OUTPUT);
+}
+
+void loop(){
+
+  // To check the functionality of button 1.
+  if (button1.isPressed()){
+    Serial.println("Button 1 is pressed ");
+    digitalWrite(ledPin_red, HIGH);  // turn the LED on
+    delay(1000);
+  }
+  else{
+    Serial.println("Button 1 is NOT pressed ");
+    digitalWrite(ledPin_red, LOW);   // turn the LED off
+    delay(1000);
+  }
+  // To check the functionality of button 2.
+  if (button2.isPressed()){
+    Serial.println("Button 2 is pressed ");
+    digitalWrite(ledPin_yellow , HIGH);   // turn the LED on
+    delay(1000);
+  }
+  else{
+    Serial.println("Button 2 is NOT pressed ");
+    digitalWrite(ledPin_yellow , LOW);   // turn the LED off
+    delay(1000);
   }
 }
 ```
@@ -115,9 +218,9 @@ When button 1 is pressed, the LED will turn on.
 
 ### Libraries
 
-Basic libraries from the teaching material are used.
+Basic libraries from the teaching material are used for debouncing.
 
-- YCI_Arduino.h
+- <YCI_Arduino.h>
 
 ### Pin out
 
@@ -131,28 +234,25 @@ Connect the push button by the pin out below (or equivalence)
 
 ### Coding example
 
-```
+```cpp
 #include <YCI_Arduino.h>
-
-LED redLED(11);
-ButtonWithDebounce button1(4);
 
 int relay_pin = 12;
 
+ButtonWithDebounce button1(4);
+
 void setup() {
-  pinMode(relay_pin, OUTPUT);
   Serial.begin(9600);
+  pinMode(relay_pin, OUTPUT);
 }
 
 void loop() {
   if (button1.isPressed()) {
-    Serial.println("Button 1 is pressed");
-    redLED.on();
+    Serial.println("The relay is ON.");
     digitalWrite(relay_pin,HIGH);
 
   } else {
-    Serial.println("Button 1 is NOT pressed");
-    redLED.off();
+    Serial.println("The relay is OFF.");
     digitalWrite(relay_pin,LOW);
   }
 }
@@ -160,7 +260,7 @@ void loop() {
 
 ### Expected output
 
-When button 1 is pressed, the relay will turn on.
+When button 1 is pressed, the relay will turn on and vice versa.
 
 ## 4. Temperature sensor (DHT11)
 
@@ -168,7 +268,11 @@ When button 1 is pressed, the relay will turn on.
 
 DHT libraries are used. To use the libraries, in the Arduino IDE, click on the 
 
-- DHT11.h
+`Sketch > Include Library > Manage libraries... `
+
+Under the library Manager, search the `DHT` library. And you will find the `DHT sensor library by Adafruit`. Install the library version 1.4.4 or above by a simply click.
+
+- <DHT11.h>
 
 ### Pin out
 
@@ -182,14 +286,10 @@ Connect the push button by the pin out below (or equivalence)
 
 ### Coding example
 
-```
+```cpp
 #include <YCI_Arduino.h>
 #include <DHT.h>
 
-//System pinout
-//S -> Pin8
-//5V -> 5V
-//GND -> GND
 #define dhtPin 5  //Data pin for the temperature sensor
 #define dhtType DHT11 //Using DHT11
 
@@ -226,7 +326,7 @@ void loop()
 
 When the finger is touching the sensor, the temperature will rise up.
 
-## Assembled system
+## Finally. Assembled system
 
 When we combine all the components together, we need to defind the pinout again.
 
