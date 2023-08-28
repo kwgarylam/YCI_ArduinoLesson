@@ -51,6 +51,8 @@ Description on key changes of the microcontroller could be found in the logbook.
    Describe the problem you encountered.
    Describe the solution you proposed.
 
+---
+
 ## Activity 2
 
 ### Analysis of the brief
@@ -59,13 +61,14 @@ Description on key changes of the microcontroller could be found in the logbook.
 
 A set of technical specification was produced and meet some elements of the brief.
 
-- By interpreting the client brief into operational requirements, prepare a technical specification for a user-friendly system that can handle some unexpected events.
+- By interpreting the client brief into operational requirements, prepare a technical specification for a user-friendly system that can handle some unexpected events.(At least 2 - 3 paragraphs)
 
 ---
 
 #### **Examples:**
 
-**Technical Specification:** (2 - 3 paragraphs)
+**Technical Specification:**
+
 The car pressure washer system will be designed to indicate the selected option (cold rinse or hot wash), operate the DC motor for up to 10 seconds for the cold rinse option when the spray lever is pressed, indicate when the hot water has reached a minimum temperature (37.C), and operate the DC motor for up to 10 seconds for the hot wash option after the minimum temperature (37.C) is reached and when the spray lever is pressed.
 
 The system must indicate if a cold rinse (Option 1) or a hot wash (Option 2) has been selected by the user. The DC motor should operate for up to 10 seconds when the spray control lever is pressed for the cold rinse option. If the control lever is released, the DC motor will stop.
@@ -82,8 +85,10 @@ A test plan was produced and the test plan demonstrated some understanding of th
 
 ---
 
-#### **Examples:**
-**Test plan** (3 - 5 tests)
+#### **Examples:** 
+
+**Test Plan Template** (3 - 5 tests)
+
 
 | Test number | Purpose of the test                                          | Test condition                                                                     | Expected result                                                                            |
 | ----------- | ------------------------------------------------------------ | ---------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------ |
@@ -181,6 +186,8 @@ Description on key changes of the microcontroller could be found in the logbook.
    Describe the problem you encountered.
    Describe the solution you proposed.
 
+---
+
 ## Activity 4
 
 ### System assembly and programming
@@ -207,6 +214,7 @@ Some key area of the program were annotated that demonstrate some understanding 
 
 ---
 #### **Examples:**
+
 
 Testing of Individual Components
 
@@ -294,8 +302,8 @@ void loop()
 
 **Expected output**
 
-![Testing_LED]()
-The LED will flash one by one with the pattern on and off.
+![Testing_LED](https://github.com/kwgarylam/YCI_ArduinoLesson/blob/main/misc/figures/traffic.png?raw=true)
+The LEDs will flash one by one with the pattern on and off.
 
 2. Push Button
 
@@ -419,7 +427,7 @@ void loop(){
 
 **Expected output**
 
-![Testing_Button]()
+![Testing_Button](https://github.com/kwgarylam/YCI_ArduinoLesson/blob/main/misc/figures/button.png?raw=true)
 
 When button 1 is pressed, the LED will turn on.
 
@@ -465,7 +473,7 @@ void loop() {
 
 **Expected output**
 
-![Testing_Relay]()
+![Testing_Relay](https://github.com/kwgarylam/YCI_ArduinoLesson/blob/main/misc/figures/relay.png?raw=true)
 
 When button 1 is pressed, the relay will turn on and vice versa.
 
@@ -527,13 +535,47 @@ void loop()
 
 ### Expected output
 
+![Testing_DHT11](https://github.com/kwgarylam/YCI_ArduinoLesson/blob/main/misc/figures/DHT11.png?raw=true)
+
 When the finger is touching the sensor, the temperature will rise up.
 
-## Finally. Assembled system
+---
+#### Logbook for activity 4
 
-When we combine all the components together, we need to defind the pinout again.
+- [ ] C.P11: Describe the key changes made to the microcontroller system during the development process.
+
+Description on key changes of the microcontroller could be found in the logbook. 4/5
+
+1. What I have done this session:
+   Disribe what you have done in this session. (At least 3 sentences)
+2. Issues encountered in this session and solutions with justification:
+   Describe the problem you encountered.
+   Describe the solution you proposed.
+
+## Activity 5
+
+### System testing and results analysis
+
+- [ ] B.P6: Assemble the input and output devices to a microcontroller.
+
+Input and output devices were assembled into the microcontroller system which is shown in the video recording and section of activity 4 and 5.
+
+- Test the system using the test plan (from Activity 2) and include some unexpected events.
+- Record the outcome of each test in the template provided.
+- Analyse the test results and evaluate the system for conformance against the client brief.
+
+
+#### **Examples:**
+
+![Assembly](https://github.com/kwgarylam/YCI_ArduinoLesson/blob/main/misc/figures/assembly.png?raw=true)
+
+I assembly them together by wire, 3 buttons, 1 led traffic light led , 1
+temperature sensor and 1 relay. I also label them as well for easier to recognise, to prevent less accident because of wrong input, this become more user-friendly and more safety.
+
 
 Circuit Connection: (M4)
+
+When we combine all the components together, we defind the pinout again.
 
 | I/O Devices        | <In/Output> | Arduino |
 | ------------------ | ----------- | ------- |
@@ -547,3 +589,51 @@ Circuit Connection: (M4)
 | Traffic (Green)    | Output ->   | 9       |
 
 The above is a listing of IO pin for each IO devices. This can reassure that the system is being placed / inserted at the correct position. Also, it will help effectively identifying the problem later in the program integration, where the wrong IO pin device can be quickly identified.
+
+---
+
+- [ ] C.P12: Describe the test results without linking the test outcome to the requirements of client brief.
+
+The test results was described however with no or weak linking of the test outcome to the requirements of client brief.
+
+Test Plan Template:
+
+
+---
+
+#### Logbook for activity 5
+
+- [ ] C.P11: Describe the key changes made to the microcontroller system during the development process.
+
+Description on key changes of the microcontroller could be found in the logbook. 5/5
+
+1. What I have done this session:
+   Disribe what you have done in this session. (At least 3 sentences)
+2. Issues encountered in this session and solutions with justification:
+   Describe the problem you encountered.
+   Describe the solution you proposed.
+
+---
+
+
+## Activity 6
+
+System in operation
+
+- [ ] C.P13: Produce a recording of a partially functioning microcontroller system that meets some of the requirements of the brief.
+
+A video was produced and recorded a partially functioning microcontroller system that meets some of the requirements.
+
+- your name, learner registration number and centre number at the start
+- a commentary explaining the operation of the user-friendly system and how its behaviour is linked with your chosen hardware and software program
+- recorded evidence of the outcome from suitable tests including some unexpected events(from Activity 5)
+
+Save the file in .mp4 format, for example:
+AY2324_L3U6_StudentID_YourName.mp4
+
+---
+#### **Examples:**
+
+![Assembly](https://github.com/kwgarylam/YCI_ArduinoLesson/blob/main/misc/figures/videoDemo.gif?raw=true)
+
+
