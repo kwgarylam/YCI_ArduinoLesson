@@ -302,7 +302,7 @@ void loop()
 
 **Expected output**
 
-![Testing_LED](https://github.com/kwgarylam/YCI_ArduinoLesson/blob/main/misc/figures/traffic.png?raw=true)
+![Testing_LED](https://github.com/kwgarylam/YCI_ArduinoLesson/blob/main/misc/figures/traffic.PNG?raw=true)
 
 
 The LEDs will flash one by one with the pattern on and off.
@@ -429,7 +429,7 @@ void loop(){
 
 **Expected output**
 
-![Testing_Button](https://github.com/kwgarylam/YCI_ArduinoLesson/blob/main/misc/figures/button.png?raw=true)
+![Testing_Button](https://github.com/kwgarylam/YCI_ArduinoLesson/blob/main/misc/figures/button.PNG?raw=true)
 
 When button 1 is pressed, the LED will turn on.
 
@@ -475,7 +475,7 @@ void loop() {
 
 **Expected output**
 
-![Testing_Relay](https://github.com/kwgarylam/YCI_ArduinoLesson/blob/main/misc/figures/relay.png?raw=true)
+![Testing_Relay](https://github.com/kwgarylam/YCI_ArduinoLesson/blob/main/misc/figures/relay.PNG?raw=true)
 
 When button 1 is pressed, the relay will turn on and vice versa.
 
@@ -537,7 +537,7 @@ void loop()
 
 ### Expected output
 
-![Testing_DHT11](https://github.com/kwgarylam/YCI_ArduinoLesson/blob/main/misc/figures/DHT11.png?raw=true)
+![Testing_DHT11](https://github.com/kwgarylam/YCI_ArduinoLesson/blob/main/misc/figures/DHT11.PNG?raw=true)
 
 When the finger is touching the sensor, the temperature will rise up.
 
@@ -569,7 +569,7 @@ Input and output devices were assembled into the microcontroller system which is
 
 #### **Examples:**
 
-![Assembly](https://github.com/kwgarylam/YCI_ArduinoLesson/blob/main/misc/figures/assembly.png?raw=true)
+![Assembly](https://github.com/kwgarylam/YCI_ArduinoLesson/blob/main/misc/figures/assembly.PNG?raw=true)
 
 I assembly them together by wire, 3 buttons, 1 led traffic light led , 1
 temperature sensor and 1 relay. I also label them as well for easier to recognise, to prevent less accident because of wrong input, this become more user-friendly and more safety.
