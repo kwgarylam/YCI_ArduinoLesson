@@ -303,6 +303,8 @@ void loop()
 **Expected output**
 
 ![Testing_LED](https://github.com/kwgarylam/YCI_ArduinoLesson/blob/main/misc/figures/traffic.png?raw=true)
+
+
 The LEDs will flash one by one with the pattern on and off.
 
 2. Push Button
