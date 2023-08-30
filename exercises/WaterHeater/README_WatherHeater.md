@@ -596,8 +596,9 @@ The test results was described however with no or weak linking of the test outco
 
 Test Plan Template:
 
-| Activity 2 |     |     |     |     | Activity 5 |     |
-| ---------- | --- | --- | --- | --- | ---------- | --- |
+
+
+Activity 2(Expected)                                 --->                            Activity 5(Actual)
 
 | Test number | Purpose of the test                                          | Test condition                                                                     | Expected result                                                                            | Actual result                                                             | Comments and justification                                                             |
 | ----------- | ------------------------------------------------------------ | ---------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
