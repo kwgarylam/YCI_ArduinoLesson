@@ -18,8 +18,6 @@ A simple project plan was prepared, only cover the key activities without detail
 
 **A short project time plan/Gantt chart**
 
-
-
 ![GanttChart](https://github.com/kwgarylam/YCI_ArduinoLesson/blob/main/misc/figures/GanttChart.PNG?raw=true)
 
 | Activities     | Tasks                                                                                                                                                                                                                               |
@@ -85,10 +83,9 @@ A test plan was produced and the test plan demonstrated some understanding of th
 
 ---
 
-#### **Examples:** 
+#### **Examples:**
 
 **Test Plan Template** (3 - 5 tests)
-
 
 | Test number | Purpose of the test                                          | Test condition                                                                     | Expected result                                                                            |
 | ----------- | ------------------------------------------------------------ | ---------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------ |
@@ -131,6 +128,7 @@ Description of some appropriate could be found in activity 3.
 ---
 
 #### **Examples:**
+
 **Selection of Appropriate Hardware:**
 
 **Input devices:**
@@ -174,6 +172,7 @@ The above diagram is a flow chart to visualise the steps of the program / system
 Additionally, a flow chart can be a checklist to ensure there are no missing components in the system. In other words, the flow chart can help to meet the user requirement with nothing left, providing a satisfied system for the consumer.
 
 ---
+
 #### Logbook for activity 3
 
 - [ ] C.P11: Describe the key changes made to the microcontroller system during the development process.
@@ -191,6 +190,7 @@ Description on key changes of the microcontroller could be found in the logbook.
 ## Activity 4
 
 ### System assembly and programming
+
 Individual testing of each component with code and photos.
 
 You are required to write individual code for each component, and testing their performance in the report.
@@ -198,7 +198,6 @@ You are required to write individual code for each component, and testing their 
 - [ ] A.P7: Create a program using simple and mostly appropriate constructs and techniques.
 
 A program was created to solve the problem using mainly simple constructs.
-
 
 - [ ] A.P8: Test specific parts of the microcontroller system during the development process to determine if they function as intended.
 
@@ -213,8 +212,8 @@ Some key area of the program were annotated that demonstrate some understanding 
 - refining the system so that it operates as expected and can handle some unexpected events
 
 ---
-#### **Examples:**
 
+#### **Examples:**
 
 Testing of Individual Components
 
@@ -234,7 +233,7 @@ The traffic light are connected by the pin out below: (M4)
 **Coding**
 
 - Example 1
-Coding example using basic setup (Suggested)
+  Coding example using basic setup (Suggested)
 
 ```cpp
 // Libraries
@@ -259,7 +258,7 @@ void loop() {
 ```
 
 - Example 2
-Coding example using class (Advanced)
+  Coding example using class (Advanced)
 
 ```cpp
 // Libraries
@@ -303,7 +302,6 @@ void loop()
 **Expected output**
 
 ![Testing_LED](https://github.com/kwgarylam/YCI_ArduinoLesson/blob/main/misc/figures/traffic.PNG?raw=true)
-
 
 The LEDs will flash one by one with the pattern on and off.
 
@@ -435,7 +433,6 @@ When button 1 is pressed, the LED will turn on.
 
 3. Relay
 
-
 **Pin out**
 
 Connect the push button by the pin out below: (M4)
@@ -472,7 +469,6 @@ void loop() {
 }
 ```
 
-
 **Expected output**
 
 ![Testing_Relay](https://github.com/kwgarylam/YCI_ArduinoLesson/blob/main/misc/figures/relay.PNG?raw=true)
@@ -480,7 +476,6 @@ void loop() {
 When button 1 is pressed, the relay will turn on and vice versa.
 
 4. Temperature sensor (DHT11)
-
 - Libraries <DHT11.h>
 
 DHT libraries are used. To use the libraries, in the Arduino IDE, click on the 
@@ -542,6 +537,7 @@ void loop()
 When the finger is touching the sensor, the temperature will rise up.
 
 ---
+
 #### Logbook for activity 4
 
 - [ ] C.P11: Describe the key changes made to the microcontroller system during the development process.
@@ -566,14 +562,12 @@ Input and output devices were assembled into the microcontroller system which is
 - Record the outcome of each test in the template provided.
 - Analyse the test results and evaluate the system for conformance against the client brief.
 
-
 #### **Examples:**
 
 ![Assembly](https://github.com/kwgarylam/YCI_ArduinoLesson/blob/main/misc/figures/assembly.PNG?raw=true)
 
 I assembly them together by wire, 3 buttons, 1 led traffic light led , 1
 temperature sensor and 1 relay. I also label them as well for easier to recognise, to prevent less accident because of wrong input, this become more user-friendly and more safety.
-
 
 Circuit Connection: (M4)
 
@@ -598,8 +592,20 @@ The above is a listing of IO pin for each IO devices. This can reassure that the
 
 The test results was described however with no or weak linking of the test outcome to the requirements of client brief.
 
+---
+
 Test Plan Template:
 
+| Activity 2 |     |     |     |     | Activity 5 |     |
+| ---------- | --- | --- | --- | --- | ---------- | --- |
+
+| Test number | Purpose of the test                                          | Test condition                                                                     | Expected result                                                                            | Actual result                                                             | Comments and justification                                                             |
+| ----------- | ------------------------------------------------------------ | ---------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
+| 001         | Testing the cold rinse (Option 1) is selected.               | Press the push button of the cold rinse (Option 1).                                | The LED of cold water will turn on to indicate that cold rinse (Option 1) is selected.     | The LED for cold water is turned on when the cold rinse button is pressed | The actual result matches the expected result. The signal for cold rinse is activated. |
+| 002         | Testing the hot water(Option 2) is selected.                 | Press the push button of the hot water(Option 2).                                  | The LED of hot water will turn on to indicate that hot water(Option 2) is selected.        |                                                                           |                                                                                        |
+| 003         | Testing the operation of DC motor when Option 1 is selected. | When option 1 is selected, press the control lever for few seconds and release it. | The motor should pump cold water through the spray lance until the control lever released. |                                                                           |                                                                                        |
+| 004         | Testing the hot water temperature indicator                  | The temperature of the hot water reached 37.C.                                     | The indicator (Heater) is turned on when hot water reached 37.C.                           |                                                                           |                                                                                        |
+| 005         | Testing the operation of DC motor when Option 2 is selected. | When option 2 is selected, press the control lever for few seconds and release it. | ...                                                                                        |                                                                           |                                                                                        |
 
 ---
 
@@ -617,7 +623,6 @@ Description on key changes of the microcontroller could be found in the logbook.
 
 ---
 
-
 ## Activity 6
 
 System in operation
@@ -634,8 +639,7 @@ Save the file in .mp4 format, for example:
 AY2324_L3U6_StudentID_YourName.mp4
 
 ---
+
 #### **Examples:**
 
 ![Assembly](https://github.com/kwgarylam/YCI_ArduinoLesson/blob/main/misc/figures/videoDemo.gif?raw=true)
-
-
